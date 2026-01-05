@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* 野幌森林公園紹介ページのCSS */
+
+/* メイン */
+main {
+    width: 100%;
+    height: 90vh;
+
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+}
+
+.title-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.main-title {
+    height: 50vh;
+    width: auto;
+    margin-bottom: 10vh;
+    align-self: center;
+}
+
+.main-deco {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1vh;
+    align-self: center;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+}
+
+/* 森林公園の概要 */
+.about {
+    margin-top: 196px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.about-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+
+    grid-column: 1 / 2;
+}
+
+.about-text-content p {
+    margin-top: 24px;
+}
+
+.about-img-wrapper {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-img-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* インタラクティブマップ */
+.map {
+    margin-top: 196px;
+}
+
+.map-area {
+    width: 100%;
+    margin-top: 72px;
+    aspect-ratio: 11 / 13;
+    background-image: url(../images/shinrin/map_background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 森林公園の魅力紹介 */
+.attraction {
+    margin-top: 196px;
+}
+
+.attraction-item {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 32px;
+    margin-top: 96px;
+}
+
+.attraction-text-content {
+    margin-top: 48px;
+}
+
+.attraction-text-content p {
+    margin-top: 72px;
+}
+
+.attraction-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ギャラリー紹介 */
+.gallery {
+    margin-top: 196px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery h2 {
+    color: var(--bg);
+}

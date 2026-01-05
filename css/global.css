@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* グローバルCSS */
+
+/* フォントインポート */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+
+:root {
+    --main: #D2E8BC;
+    --main2: #4B702A;
+    --text: #000000;
+    --bg: #FDF8EE;
+    --accent: #35312C;
+}
+
+body {
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 16px;
+    background-color: var(--bg);
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 80vw;
+    max-width: 1728px;
+    margin: 0 auto;
+}
+
+h2,
+h3,
+p {
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.3rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text);
+    font-size: 2rem;
+}
+
+h3 {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--text);
+    line-height: 1.5rem;
+}
+
+/* 詳細を見るボタン　背景が流れる（左から右） */
+.detail-btn {
+    margin-top: 48px;
+    width: 160px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+    overflow: hidden;
+    /*アニメーションの指定*/
+    transition: ease .2s;
+}
+
+.detail-btn svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.detail-btn:hover .detail-btn-item {
+    fill: var(--accent);
+}
+
+.detail-btn:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /*色や形状*/
+    background: var(--bg);
+    /*背景色*/
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.detail-btn:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
