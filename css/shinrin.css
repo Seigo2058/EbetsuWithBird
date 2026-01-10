@@ -1,44 +1,6 @@
 @charset "UTF-8";
 /* 野幌森林公園紹介ページのCSS */
 
-/* メイン */
-main {
-    width: 100%;
-    height: 90vh;
-
-    display: grid;
-    grid-template-columns: 4fr 6fr;
-}
-
-.title-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.main-title {
-    height: 50vh;
-    width: auto;
-    margin-bottom: 10vh;
-    align-self: center;
-}
-
-.main-deco {
-    width: 50%;
-    height: auto;
-    margin-bottom: 1vh;
-    align-self: center;
-}
-
-.main-img {
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    object-fit: cover;
-}
-
 /* 森林公園の概要 */
 .about {
     margin-top: 196px;
@@ -124,10 +86,15 @@ main {
     background-color: var(--accent);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .gallery h2 {
+    margin-top: 72px;
     color: var(--bg);
+}
+
+.gallery .detail-btn {
+    margin-bottom: 72px;
 }

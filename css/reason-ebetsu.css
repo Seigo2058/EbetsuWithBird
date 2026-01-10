@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background: #FDF8EE;
+    color: #333;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.header {
+    background: #FDF8EE;
+}
+
+.header-inner {
+    width: 1280px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin-left: 24px;
+}
+
+/* ===== ファーストビュー ===== */
+.fv {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    padding: 40px 0;
+}
+
+.fv-text {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.fv-image {
+    width: calc(100% - 200px);
+}
+
+/* ===== セクション共通 ===== */
+.section {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/* ===== 江別市について ===== */
+.about {
+    display: flex;
+    gap: 60px;
+}
+
+.about-text {
+    width: 40%;
+}
+
+.about-image {
+    width: 60%;
+}
+
+/* ===== 理由 ===== */
+.reason-list {
+    display: flex;
+    gap: 40px;
+}
+
+.reason-item {
+    width: 50%;
+}
+
+.reason-item h3 {
+    margin: 16px 0 8px;
+}
+
+/* ===== 自然と暮らす ===== */
+.life-list {
+    display: flex;
+    gap: 40px;
+}
+
+.life-item {
+    width: 50%;
+}
+
+/* ===== マップ ===== */
+.map {
+    width: 100%;
+    height: 400px;
+    background: #ccc;
+}
+
+/* ===== フッター ===== */
+.footer {
+    background: #4B702A;
+    color: #fff;
+}
+
+.footer-inner {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.contact {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.tel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-nav {
+    margin-bottom: 24px;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
