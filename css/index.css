@@ -1,0 +1,266 @@
+/* ファーストビュー */
+.first-view {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.first-slider,
+.first-slider .first-slide {
+    width: 100%;
+    height: 100vh;
+}
+
+.first-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#first-title {
+    position: absolute;
+    top: 22%;
+    right: 17%;
+    height: 70%;
+    z-index: 1;
+}
+
+/* ファーストビュー タイトル初期状態 */
+#first-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+/* 表示状態 */
+#first-title.is-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* サイト概要 */
+.about {
+    margin-top: 250px;
+}
+
+.about-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text-content {
+    text-align: center;
+}
+
+.about p {
+    margin-top: 196px;
+    font-size: 20px;
+}
+
+/* About スライドショー */
+.about-slider {
+    width: 15%;
+    height: 1100px;
+}
+
+.about-slider .slick-list {
+    height: 100% !important;
+}
+
+.about-slider .slick-slide {
+    display: flex;
+}
+
+/* 奇数：左寄せ */
+.about-slider .slick-slide:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+/* 偶数：右寄せ */
+.about-slider .slick-slide:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.about-slider .slick-slide {
+    margin: 150px 0;
+}
+
+.about-slider img {
+    height: 160px;
+    width: 120px;
+}
+
+/* 江別に住むメリット解説 */
+.intro-live {
+    margin-top: 256px;
+}
+
+.intro-live-title {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.intro-live-title h2,
+.intro-live-title p {
+    line-height: 150%;
+}
+
+.scroll-wrapper {
+    height: auto;
+    width: 100%;
+}
+
+.scroll-section {
+    height: 100vh;
+}
+
+.scroll-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    opacity: 0;
+}
+
+.image {
+    height: 95vh;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text {
+    height: 95vh;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+/* テキスト調整 */
+.text-inner {
+    margin-left: 10%;
+}
+
+.text-inner h2 {
+    text-align: left;
+    margin: 20% 0;
+}
+
+.text-inner p {
+    text-align: left;
+    margin: 10% 0;
+}
+
+.text-inner table {
+    margin-bottom: 8%;
+}
+
+.text-inner td {
+    line-height: 2rem;
+    padding-right: 28px;
+}
+
+.text-inner label {
+    line-height: 3rem;
+}
+
+/* 野幌森林公園紹介 */
+.intro-shinrin {
+    margin-top: 196px;
+}
+
+.intro-shinrin-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.intro-shinrin img {
+    width: 50%;
+    max-height: 80vh;
+    height: auto;
+    object-fit: contain;
+}
+
+.intro-shinrin-text {
+    width: 45%;
+    text-align: center;
+}
+
+.intro-shinrin-inner h2 {
+    margin-bottom: 96px;
+}
+
+.intro-shinrin-inner p {
+    margin-bottom: 48px;
+}
+
+/* 子ページ導入 */
+.intro-reason {
+    padding-top: 196px;
+}
+
+.scroll-block {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.reason-bg-wrapper {
+    position: absolute;
+    inset: 0;
+}
+
+.reason-bg-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reason-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--bg);
+    opacity: 0;
+    z-index: 1;
+}
+
+.reason-text h1,
+.reason-text h2,
+.reason-text p,
+.gallery-text-content h1 {
+    color: var(--bg);
+    line-height: 150%;
+}
+
+.intro-child-title {
+    margin: 48px 0;
+}
+
+.reason-text p {
+    margin-bottom: 48px;
+}

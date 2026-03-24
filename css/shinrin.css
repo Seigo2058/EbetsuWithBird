@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/* 野幌森林公園紹介ページのCSS */
+
+/* 森林公園の概要 */
+.about {
+    margin-top: 196px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.about-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    grid-column: 1 / 2;
+}
+
+.about-text-content p {
+    margin-top: 24px;
+}
+
+.about-img-wrapper {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-img-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* インタラクティブマップ */
+.map {
+    margin-top: 196px;
+}
+
+.map-wrapper {
+    width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.map-wrapper p {
+    padding-top: 16px;
+}
+
+.map-area {
+    position: relative;
+    width: 100%;
+    margin-top: 64px;
+    aspect-ratio: 846 / 1000;
+    background-image: url(../images/shinrin/map_background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.map-area>* {
+    position: absolute;
+}
+
+/* ****************************************************
+    インタラクティブマップ子要素は行数が長いため一番下に記述
+    **************************************************** */
+
+/* 森林公園の魅力紹介 */
+.attraction {
+    margin-top: 196px;
+    margin-bottom: 196px;
+}
+
+.attraction-item {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 32px;
+    margin-top: 96px;
+}
+
+.attraction-text-content {
+    margin-top: 48px;
+}
+
+.attraction-text-content p {
+    margin-top: 72px;
+}
+
+.attraction-img {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    aspect-ratio: 43 / 35;
+    object-fit: contain;
+}
+
+/* *******************************
+    インタラクティブマップ子要素
+    *************************** */
+.map-area>* {
+    position: absolute;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+/* SVGタグ自体の設定 */
+.map-area svg {
+    /* 重要：SVGの四角い枠（透明な余白）はマウスを無視させる */
+    pointer-events: none;
+    overflow: visible;
+}
+
+/* SVGの中身（パスや図形）だけマウスイベントを有効にする */
+.map-area svg path,
+.map-area svg rect,
+.map-area svg circle,
+.map-area svg polygon,
+.map-area svg g {
+    pointer-events: auto;
+    fill-rule: evenodd;
+}
+
+/* --- SVGの中身の設定 --- */
+
+/* 当たり判定用の透明な線 */
+.map-area svg path.hit-area {
+    pointer-events: stroke;
+    /* 透明でもストローク（線）として反応させる */
+    stroke: rgba(0, 0, 0, 0);
+    /* 完全な透明 */
+    fill: none;
+    cursor: pointer;
+}
+
+/* 表示用パスをイベント対象から外す */
+.map-area svg path:not(.hit-area) {
+    pointer-events: none;
+}
+
+/* ホバー時の挙動 */
+.map-area img:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* 吹き出し */
+.map-tooltip {
+    position: absolute;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 100;
+}
+
+.map-tooltip.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 吹き出し内のテキストスタイル */
+.map-tooltip h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+.map-tooltip p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #666;
+    margin: 0;
+}
+
+/* 吹き出しの下の三角矢印（お好みで） */
+.map-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    /* 枠線をつける場合は工夫が必要ですが、簡易的にはこれでOK */
+}
+
+#katsura-course {
+    left: 41.654%;
+    top: 20.876%;
+    width: 9.955%;
+    height: 10.876%;
+}
+
+#osawa-course {
+    left: 40.628%;
+    top: 20.876%;
+    width: 12.207%;
+    height: 11.653%;
+}
+
+#shikimi-course {
+    left: 51.986%;
+    top: 21.154%;
+    width: 7.788%;
+    height: 11.640%;
+}
+
+#kinen-to-renrakusen {
+    left: 25.695%;
+    top: 27.964%;
+    width: 10.868%;
+    height: 4.974%;
+}
+
+#mizuho-renrakusen {
+    left: 23.885%;
+    top: 33.712%;
+    width: 18.119%;
+    height: 12.487%;
+}
+
+#fureai-course {
+    left: 25.513%;
+    top: 31.279%;
+    width: 15.046%;
+    height: 3.500%;
+}
+
+#chuo-line-1 {
+    left: 40.532%;
+    top: 32.494%;
+    width: 10.707%;
+    height: 20.869%;
+}
+
+#chuo-line-2 {
+    left: 50.065%;
+    top: 59.3%;
+    width: 3.810%;
+    height: 15.856%;
+}
+
+#shibun-line {
+    left: 48.260%;
+    top: 27.299%;
+    width: 17.769%;
+    height: 23.518%;
+}
+
+#ezo-yuzuriha-course {
+    left: 41.875%;
+    top: 30.771%;
+    width: 8.348%;
+    height: 4.328%;
+}
+
+#tomambetsu-line {
+    left: 52.823%;
+    top: 51%;
+    width: 13.007%;
+    height: 23.144%;
+}
+
+#kisen {
+    left: 37.371%;
+    top: 51.062%;
+    width: 26.022%;
+    height: 9.756%;
+}
+
+#momiji-course {
+    left: 48.059%;
+    top: 37.849%;
+    width: 15.339%;
+    height: 14.520%;
+}
+
+#ezo-matsu-course {
+    left: 51.539%;
+    top: 41.536%;
+    width: 11.858%;
+    height: 9.278%;
+}
+
+#karamatsu-course {
+    left: 64.619%;
+    top: 42.465%;
+    width: 6.761%;
+    height: 7.739%;
+}
+
+#mizuho-line {
+    left: 27.688%;
+    top: 43.374%;
+    width: 9.683%;
+    height: 10.546%;
+}
+
+#kaminohoru-line {
+    left: 33.227%;
+    top: 54.199%;
+    width: 19.922%;
+    height: 17.078%;
+}
+
+#kaitaku-no-sawa-line {
+    left: 27.541%;
+    top: 39.995%;
+    width: 1.314%;
+    height: 3.380%;
+}
+
+#hokkaido-museum {
+    left: 22.931%;
+    top: 30.400%;
+    width: 7.351%;
+    height: 7.403%;
+}
+
+#mizuho-no-ike {
+    left: 33.924%;
+    top: 41.700%;
+    width: 7.351%;
+    height: 7.403%;
+}
+
+#showa-no-mori-no-kuri {
+    left: 53.191%;
+    top: 46.300%;
+    width: 7.351%;
+    height: 7.403%;
+}
+
+#hokkaido-kaitaku-no-mura {
+    left: 25.177%;
+    top: 40.000%;
+    width: 7.351%;
+    height: 7.403%;
+}
+
+#shizen-fureai-koryukan {
+    left: 35.934%;
+    top: 25.600%;
+    width: 7.329%;
+    height: 7.400%;
+}
+
+#hokkaido-zaimoku-ikushujo-kyuchosha {
+    left: 50.236%;
+    top: 3.200%;
+    width: 7.351%;
+    height: 7.403%;
+}
+
+#hokkaido-maizo-bunkazai-center {
+    left: 21.986%;
+    top: 23.300%;
+    width: 7.351%;
+    height: 7.403%;
+}

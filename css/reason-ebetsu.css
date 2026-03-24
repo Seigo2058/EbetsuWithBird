@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.section {
+    margin-top: 196px;
+}
+
+/* 江別市について */
+.about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text p {
+    margin-top: 64px;
+}
+
+.about-image {
+    width: 40%;
+}
+
+/* 江別を選ぶ理由 */
+/* お店の紹介 */
+.reason,
+.life {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reason-item,
+.life-item {
+    width: 450px;
+    height: 619px;
+    background-color: #fff;
+    padding: 30px;
+    margin-right: 30px;
+}
+
+.reason-title,
+.life-title {
+    width: 30%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.reason-title h2,
+.life-title h2 {
+    text-align: left;
+    padding: 0 10% 0 20%;
+}
+
+.reason-title p,
+.life-title p {
+    padding: 32px 10% 0 20%;
+}
+
+.reason-list,
+.life-list {
+    width: 70%;
+    min-width: 0;
+}
+
+article img {
+    padding: 30px 0px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .reason,
+    .life {
+        display: block;
+        /* または flex-direction: column; */
+    }
+
+    .reason-title,
+    .life-title,
+    .reason-list,
+    .life-list {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+/* スライダーのスタイル */
+/* --- スライダーナビゲーションボタン --- */
+.slider-nav {
+    display: flex;
+    gap: 16px;
+    padding: 32px 10% 0 20%;
+    /* タイトルのpタグと同じ余白に合わせて配置 */
+    margin-top: auto;
+    /* 必要に応じて調整 */
+}
+
+/* 共通ボタンボタンスタイル */
+.slider-nav button {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #4B702A;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.slider-nav button:hover {
+    background-color: #4B702A;
+}
+
+/* 矢印の線を作成 */
+.slider-nav button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transition: border-color 0.3s ease;
+}
+
+.slider-nav button:hover::before {
+    border-color: #fff;
+}
+
+/* 左矢印 (Prev) */
+.slider-nav .arrow-prev::before {
+    transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+/* 右矢印 (Next) */
+.slider-nav .arrow-next::before {
+    transform: translate(-70%, -50%) rotate(45deg);
+}
+
+/* スマホ表示時の調整 */
+@media screen and (max-width: 768px) {
+    .slider-nav {
+        justify-content: flex-end;
+        /* スマホでは右下に配置など */
+        padding: 20px;
+    }
+}
+
+/* map */
+.map {
+    margin-top: 64px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 700px;
+}

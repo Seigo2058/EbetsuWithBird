@@ -1,0 +1,110 @@
+.gallery-title-wrapper {
+    text-align: center;
+}
+
+.gallery-title {
+    width: 80%;
+    max-width: 854px;
+    height: auto;
+    margin-top: 72px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery {
+    box-sizing: border-box;
+    display: grid;
+    gap: clamp(1rem, 2.5vw, 5rem) clamp(.5rem, 1.5vw, 5rem);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 6rem;
+    margin-bottom: 196px;
+}
+
+.item-text-content {
+    padding: 1rem 1rem;
+}
+
+.item-bird-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
+
+.item p {
+    font-size: 0.9rem;
+    padding-top: 0.75rem;
+}
+
+/* item-bird-nameをクリックできるようにする */
+.item-bird-name {
+    cursor: pointer;
+    user-select: none;
+    /* 連打でテキスト選択されるのを防ぐ */
+}
+
+/* 矢印アイコンのアニメーション準備 */
+.item-bird-name svg {
+    transition: transform 0.3s ease;
+}
+
+/* 開いている状態（クラスが付与された時）矢印を回転 */
+.item-bird-name.is-active svg {
+    transform: rotate(180deg);
+}
+
+/* デフォルトでは説明文を非表示にする */
+.item-text-desc {
+    display: none;
+}
+
+/* JSで .is-open クラスが付与されたら表示する */
+.item-text-desc.is-open {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ふわっと表示させるアニメーション（お好みで） */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 12px;
+        width: calc(100vw - 24px);
+    }
+}

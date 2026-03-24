@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>野幌森林公園 / 江別市 - 野鳥と暮らす街 -</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="images/" href="images/component/logo_favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/shinrin.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-wrapper">
+            <div class="header-home">
+                <a href="index.html"><img class="logo" src="./images/header/logo.svg" alt="ホーム"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="shinrin.html">野幌森林公園</a></li>
+                    <li><a href="reason-ebetsu.html">江別を選ぶ理由</a></li>
+                    <li><a href="gallery.html">ギャラリー</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メイン -->
+    <main>
+        <div class="title-wrapper">
+            <img class="main-title" src="./images/shinrin/shinrin_title.svg" alt="野鳥の楽園野幌森林公園">
+            <img class="main-deco" src="./images/shinrin/shinrin_main_deco.webp" alt="木々に野鳥が止まるイラスト">
+        </div>
+        <img class="main-img" src="./images/shinrin/shinrin_main.webp" alt="森林に遊歩道が続く風景写真">
+    </main>
+
+    <!-- 森林公園の概要 -->
+    <section class="about">
+        <div class="about-grid wrapper">
+            <div class="about-text-wrapper">
+                <h2>野幌森林公園とは</h2>
+                <div class="about-text-content">
+                    <p>　道立自然公園野幌森林公園は、札幌市をはじめとする石狩平野のほぼ中央の丘陵地帯にあり、札幌市・江別市・北広島市にまたがる、大都市に隣接した平地林として世界的にも大変貴重な森林です。</p>
+                    <p>　この森林は明治時代から水田を支える重要な水源涵養林として保護されてきました。1968年に北海道百年を記念して道立自然公園に指定されました。現在は、面積は2,053ha、公園の約8割を国有林が占め、昭和の森自然休養林や鳥獣保護区に指定されています。
+                    </p>
+                    <p>　北西部に北海道開拓の村・北海道博物館などの道立の施設が設置されている記念施設地区があるほか、5箇所の入り口から遊歩道を使って自然を楽しむことができます。公園内は、天然林や草地・沢・池など多様な環境がそろっているため、様々な野鳥・動物・昆虫・植物など四季折々の変化に富んだ自然を楽しむことができます。
+                    </p>
+                </div>
+            </div>
+            <div class="about-img-wrapper">
+                <img class="about-img-1" src="./images/shinrin/shinrin_about_1.webp" alt="森林に遊歩道が続く風景写真">
+                <img class="about-img-2" src="./images/shinrin/shinrin_about_2.webp" alt="シマエナガの写真">
+            </div>
+        </div>
+    </section>
+
+    <!-- インタラクティブマップで紹介 -->
+    <section class="map">
+        <div class="map-wrapper">
+            <h2>野幌森林公園のおすすめスポットご紹介</h2>
+            <p>コースやランドマークの上に、マウスを乗せると名称や説明をご覧になれます。</p>
+
+            <div class="map-area">
+
+                <svg id="katsura-course" xmlns="http://www.w3.org/2000/svg" width="86" height="111" viewBox="0 0 86 111"
+                    fill="none">
+                    <path
+                        d="M2.93282 109.841L1.06506 102.798L6.2296 92.7477L11.4067 87.4219L10.83 72.6348L15.8567 66.5946L11.8329 61.4192L17.7244 56.3941V34.2636L20.0309 21.1933L27.5019 19.1882L32.3907 16.4564L33.8323 11.707L38.7085 8.12299L60.4196 1.08032L67.6023 4.81469L85.2895 1.08032"
+                        stroke="#DB8085" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="osawa-course" xmlns="http://www.w3.org/2000/svg" width="105" height="119" viewBox="0 0 105 119"
+                    fill="none">
+                    <path
+                        d="M88.1013 27.0779L93.7171 13.7068L102.855 11.4512M93.4915 0.774414C121.094 23.331 84.8547 27.6418 84.8547 27.6418L73.4978 43.5943V54.221L65.1618 64.998C55.5347 58.2436 50.7964 62.7047 50.7964 62.7047L34.1245 77.2161V99.472L11.1348 109.547L0.592651 117.304"
+                        stroke="#241D24" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="shikimi-course" xmlns="http://www.w3.org/2000/svg" width="68" height="119" viewBox="0 0 68 119"
+                    fill="none">
+                    <path
+                        d="M36.7974 117.38L40.2822 113.846L44.306 112.656L45.5094 111.553L50.7241 112.267L61.5545 109.636L66.1048 104.748L65.0519 98.1443L57.6185 93.8836L53.4568 78.3572L57.4304 75.1491V70.312L55.4248 68.4072L52.9804 68.1566L47.8033 64.0964V54.0337L45.3088 46.4146L44.5442 41.8656L40.6708 39.2842L40.6206 33.9207L42.7767 30.6625L38.9409 29.3718L33.7137 24.873L26.719 24.1963L24.4251 19.1211L17.5808 16.8278L16.4777 12.6549L11.965 11.7025V4.79767L8.90641 2.93049L0.219482 0.975586"
+                        stroke="#4D9B46" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="kinen-to-renrakusen" xmlns="http://www.w3.org/2000/svg" width="94" height="52"
+                    viewBox="0 0 94 52" fill="none">
+                    <path
+                        d="M3.94579 51.0537L1 39.7879V34.462L5.78847 32.9207L12.8834 19.3241L19.4018 13.9606V7.06833L23.225 4.57458L31.6613 11.4669L37.603 8.78514V3.42169L39.8969 1.31641L50.4391 9.75006H55.6162L65.1931 14.725L60.9813 18.1712L75.9233 23.7351L87.6187 34.462L91.8055 31.1663L92.9462 26.9933"
+                        stroke="#267E3F" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="mizuho-renrakusen" xmlns="http://www.w3.org/2000/svg" width="154" height="127"
+                    viewBox="0 0 154 127" fill="none">
+                    <path
+                        d="M153.238 39.7785L132.429 46.0067L123.805 55.3927L117.287 60.7562L109.239 62.8614L98.509 58.6509L79.9192 38.35L72.4482 39.3024L56.3529 36.4326L49.6466 29.5404H41.9875M41.9875 29.5404L35.0931 23.024L36.4344 6.74567C36.4344 6.74567 38.1643 -3.79326 29.1514 3.67548L9.0323 26.6581L0.0319824 26.3699M41.9875 29.5404L44.0935 34.3272L36.0458 42.3724M75.7575 125.869L80.6964 121.483L81.273 111.521L77.5375 106.157L79.2047 92.849L92.6676 84.9918L94.8738 74.7411L104.263 73.6008L109.252 62.8739"
+                        stroke="#5D4320" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="fureai-course" xmlns="http://www.w3.org/2000/svg" width="130" height="37" viewBox="0 0 130 37"
+                    fill="none">
+                    <path
+                        d="M9.33595 36.0003L4.07114 27.2408H1V18.6192L16.9073 14.9851L27.2488 17.8548H33.1906L45.262 22.4538L58.4867 10.9625L69.7936 9.8096L80.5237 1H89.148L88.1953 12.4913L92.3194 13.168L97.5842 17.6668L109.944 18.6192L117.127 29.0579L122.103 24.8473C122.103 24.8473 129.374 19.6718 128.045 13.168"
+                        stroke="#E38832" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="chuo-line-1" xmlns="http://www.w3.org/2000/svg" width="92" height="211" viewBox="0 0 92 211"
+                    fill="none">
+                    <path
+                        d="M0.341797 0.958252C0.341797 0.958252 4.55365 2.19887 4.75422 18.2892C4.75422 18.2892 5.51886 21.7354 7.82535 24.0411C10.1318 26.3469 11.8492 28.4522 11.4606 31.5099C11.4606 31.5099 12.0372 37.2618 10.5079 40.7079C10.5079 40.7079 8.13873 48.3646 12.6389 51.8359C13.4161 52.4499 34.8013 69.2545 34.8013 69.2545L47.136 70.9839L60.7117 86.786L75.0771 97.4127V120.684L86.434 133.328L84.278 202.138L90.9216 209.644"
+                        stroke="#2F2744" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="chuo-line-2" xmlns="http://www.w3.org/2000/svg" width="34" height="160" viewBox="0 0 34 160"
+                    fill="none">
+                    <path
+                        d="M0.0717773 158.885C0.0717773 158.885 21.4068 160.439 23.4125 144.048L23.6757 142.494L26.1702 115.677L32.3 72.7694L20.8051 42.8819V21.4281L17.3579 7.25508H12.3814L15.064 0.362793"
+                        stroke="#362950" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="shibun-line" xmlns="http://www.w3.org/2000/svg" width="152" height="237" viewBox="0 0 152 237"
+                    fill="none">
+                    <path
+                        d="M0.237549 0.971436L6.12912 2.41255L11.4441 12.3249L8.28519 16.3475L6.41743 28.4153L17.1978 35.9592L17.7618 36.3602C18.3009 37.0494 19.6421 38.7662 19.6421 38.7662V41.6359L24.3805 42.3502L28.5422 56.7112L38.9214 61.1599H41.3282L42.1931 58.7163L55.844 59.1423L59.5795 57.2752L63.4654 51.9618L68.9308 56.4105L97.0976 85.8594L107.59 91.8995L125.415 108.278L121.679 113.454L120.814 128.967L128.473 138.454L135.756 139.607L141.698 141.524L147.063 145.446L149.558 155.309L150.56 194.194L137.624 203.53L136.91 208.843L127.282 221.061L128.285 236.149"
+                        stroke="#205E36" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="ezo-yuzuriha-course" xmlns="http://www.w3.org/2000/svg" width="73" height="45"
+                    viewBox="0 0 73 45" fill="none">
+                    <path
+                        d="M0.667725 10.3863L10.4327 19.1458L15.7477 32.8051L22.6546 43.1435L25.3873 43.8578L29.9752 38.1184L37.747 36.8276L41.3572 31.3639L46.2209 31.79L48.0886 27.1283L47.512 25.1859L50.6709 20.2987H53.8423L55.1335 10.3863L62.8928 8.80737L64.6227 5.64944L68.6465 4.34618L71.2914 0.574219"
+                        stroke="#6DA6C8" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="tomambetsu-line" xmlns="http://www.w3.org/2000/svg" width="112" height="233"
+                    viewBox="0 0 112 233" fill="none">
+                    <path
+                        d="M0.142334 228.385L22.6306 231.618C22.6306 231.618 68.0459 226.681 71.9694 226.393C75.893 226.104 80.2552 219.688 74.4138 217.195C68.5724 214.701 77.0462 207.809 77.0462 207.809C77.0462 207.809 83.0381 200.816 77.0462 195.402C71.0543 189.989 79.9168 185.966 79.9168 185.966L106.98 172.696L107.118 157.708L103.232 157.47L97.0023 142.482L86.9365 142.244L87.2248 134.863L100.5 121.267L101.503 107.144L110.177 97.5194L109.788 89.7124L103.27 88.8978L104.799 16.1027L91.3866 8.05757L89.9826 0.175293"
+                        stroke="#337AAB" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="kisen" xmlns="http://www.w3.org/2000/svg" width="222" height="100" viewBox="0 0 222 100"
+                    fill="none">
+                    <path
+                        d="M0.235107 29.3554L26.3962 35.6838L40.7616 41.7114L70.3699 90.5715L80.1474 98.3284H85.3245L122.015 87.7644L122.592 87.6015V63.8419L113.78 35.4958L117.553 23.7789L210.502 8.95426L220.417 0.77124"
+                        stroke="#D87987" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="momiji-course" xmlns="http://www.w3.org/2000/svg" width="132" height="148"
+                    viewBox="0 0 132 148" fill="none">
+                    <path
+                        d="M131.069 128.546L117.556 136.88L93.99 139.173L89.9661 136.015L77.7443 139.173H58.3397L50.0037 145.213L37.9323 146.353L29.0322 59.5731L36.2149 61.0142L30.7495 39.4602L24.4318 37.1669L22.7019 31.7032H8.62479L1.3042 1.15161L17.6126 2.96867L21.2603 1.15161L34.4851 3.83334L56.0457 1.15161L63.2284 23.9463L69.2704 31.9915L84.5008 31.1268L91.6835 27.6807L98.0138 30.2746L117.268 30.5503L123.598 23.6581"
+                        stroke="#AA7199" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="ezo-matsu-course" xmlns="http://www.w3.org/2000/svg" width="102" height="95"
+                    viewBox="0 0 102 95" fill="none">
+                    <path
+                        d="M0.254883 2.54828L5.72026 1.10718L9.74409 4.84154L13.8682 30.9946L26.1277 33.8643C26.1277 33.8643 37.4972 35.5937 35.6921 51.1076L47.2496 53.6891L54.871 60.5813L68.3841 62.8746L82.4737 73.5013L84.7677 87.8623L87.0616 90.1555L96.2625 88.4262L100.575 93.8899"
+                        stroke="#5E3371" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="karamatsu-course" xmlns="http://www.w3.org/2000/svg" width="60" height="79" viewBox="0 0 60 79"
+                    fill="none">
+                    <path
+                        d="M0.929199 78.4654L7.63558 61.6106H10.995C10.995 61.6106 13.6776 56.1469 19.0427 62.7635L21.4369 62.8638C21.4369 62.8638 29.096 53.0016 38.0085 66.122L42.3207 64.1044L51.0452 64.0042M51.0452 64.0042L53.2514 73.7787M51.0452 64.0042L48.839 53.1769M48.839 53.1769L31.7786 50.1067L24.6961 41.6855L12.8628 42.6379M48.839 53.1769L50.4686 37.9513L56.8867 31.7232L58.1276 15.1566L45.1912 9.69292L43.3736 1.07129L11.8599 3.75301"
+                        stroke="#855A93" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="mizuho-line" xmlns="http://www.w3.org/2000/svg" width="84" height="107" viewBox="0 0 84 107"
+                    fill="none">
+                    <path
+                        d="M82.0424 106.457L80.6008 95.8301L77.7302 90.3663V67.8474C77.7302 67.8474 75.712 63.9376 70.5475 62.7847C65.383 61.6318 61.9233 62.7847 61.9233 62.7847L57.3228 55.8924M57.3228 55.8924L55.8813 49.8522V32.609H53.5873L46.9812 34.0501L44.1106 32.609C44.1106 32.609 43.2457 20.8294 38.0686 15.0775C38.0686 15.0775 34.6214 13.9246 34.0448 10.7667H19.6794L13.9257 2.72153L0.12439 0.992188M57.3228 55.8924C57.3228 55.8924 43.8098 63.3611 37.843 57.7596C31.8762 52.158 55.8812 38.9374 55.8812 38.9374"
+                        stroke="#317AAC" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="kaminohoru-line" xmlns="http://www.w3.org/2000/svg" width="169" height="172"
+                    viewBox="0 0 169 172" fill="none">
+                    <path
+                        d="M168.87 170.893H137.444L110.995 165.142C110.995 165.142 89.4342 151.921 71.9099 153.938L40.0076 126.933L38.5661 114.289L31.095 105.091L29.9418 92.1585M29.9418 92.1585C29.9418 92.1585 7.5162 97.9104 5.22225 65.4415L0.333496 63.7121L16.7171 67.1583L31.9474 61.6946L42.0133 64.2761L50.6375 61.6946L59.8384 39.5641H67.0211L72.7748 26.9199L82.6651 20.7795M29.9418 92.1585L39.1301 93.5997L40.2834 78.0857L42.0133 64.2887L43.154 41.306M43.154 41.306L0.333496 42.1707M43.154 41.306L59.8259 39.5765M43.154 41.306L43.154 34.1253L35.3946 24.3508L37.1245 12.5712L35.683 0.11499"
+                        stroke="#207C3E" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <svg id="kaitaku-no-sawa-line" xmlns="http://www.w3.org/2000/svg" width="14" height="35"
+                    viewBox="0 0 14 35" fill="none">
+                    <path d="M0.996948 0.0773926L2.23794 16.0675L6.75064 16.7317L12.1157 27.9348L8.27994 33.8747"
+                        stroke="#322862" stroke-width="3" stroke-miterlimit="10" />
+                </svg>
+                <img id="hokkaido-museum" src="./images/map/hokkaido-museum.svg" alt="北海道博物館">
+                <img id="mizuho-no-ike" src="./images/map/mizuho-no-ike.svg" alt="瑞穂の池">
+                <img id="showa-no-mori-no-kuri" src="./images/map/showa-no-mori-no-kuri.svg" alt="昭和の森のクリ">
+                <img id="hokkaido-kaitaku-no-mura" src="./images/map/hokkaido-kaitaku-no-mura.svg" alt="北海道開拓の村">
+                <img id="shizen-fureai-koryukan" src="./images/map/shizen-fureai-koryukan.svg" alt="自然ふれあい交流館">
+                <img id="hokkaido-zaimoku-ikushujo-kyuchosha" src="./images/map/hokkaido-zaimoku-ikushujo-kyuchosha.svg"
+                    alt="北海道材木育種場旧庁舎">
+                <img id="hokkaido-maizo-bunkazai-center" src="./images/map/hokkaido-maizo-bunkazai-center.svg"
+                    alt="北海道埋蔵文化財センター">
+
+                <div id="map-tooltip" class="map-tooltip">
+                    <h3 class="tooltip-title"></h3>
+                    <p class="tooltip-desc"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 森林公園の魅力 -->
+    <section class="attraction">
+        <div class="wrapper">
+            <h2>野幌森林公園の魅力</h2>
+            <div class="attraction-item">
+                <div class="attraction-text-content">
+                    <h3>散策・季節ごとの楽しみ — 四季折々の森の表情</h3>
+                    <p>　公園内には各コースごとに 2〜6
+                        km程度の遊歩道が整備されており、気軽な散策から長時間の自然観察まで楽しめます。春は雪どけとともに花や野草、夏は深い緑と虫の声、秋は紅葉のグラデーション、冬は雪の森と動物の足跡……季節ごとに森の表情が大きく変わり、それぞれの魅力があります。都市部から近く、アクセスが良いので、気軽に「自然の息吹」を感じに行くことができます。
+                    </p>
+                </div>
+                <img class="attraction-img" src="./images/shinrin/shinrin_attraction_1.webp" alt="森林の中で男性が上を見つめる写真">
+            </div>
+            <div class="attraction-item">
+                <div class="attraction-text-content">
+                    <h3>動物の多様性 — バードウォッチングから昆虫</h3>
+                    <p>　野鳥の種類も豊富。森林性の鳥、水辺の鳥、草原性の鳥など、150種以上。なかには希少鳥類や北海道らしい鳥を見るチャンスもあります。キツネやリス、ウサギ、様々な昆虫など、動物・昆虫にも出会える機会があります。自然観察が好きな人にはとても魅力的です。
+                    </p>
+                </div>
+                <img class="attraction-img" src="./images/shinrin/shinrin_attraction_2.webp" alt="冬の森林できつねが座っている写真">
+            </div>
+            <div class="attraction-item">
+                <div class="attraction-text-content">
+                    <h3>歴史・文化との融合— 博物館や開拓の村も近くに</h3>
+                    <p>　公園の隣接地には 北海道博物館 や
+                        北海道開拓の村があり、野幌森林公園を散策する中で、北海道の自然だけでなく、歴史・文化にも触れられます。森林だけでなく、過去の開拓や生活文化を知ることで、より深く「北海道」を感じられるのが魅力です。
+                    </p>
+                </div>
+                <img class="attraction-img" src="./images/shinrin/shinrin_attraction_3.webp" alt="北海道博物館の外観写真">
+            </div>
+        </div>
+    </section>
+
+    <!-- ギャラリー紹介 -->
+    <section class="intro-gallery">
+        <div class="gallery-text-content">
+            <h2>野幌森林公園に住む野鳥たち</h2>
+        </div>
+
+        <div class="gallery-slider">
+            <div><img src="./images/shinrin/gallery_content_1.webp" alt="シマエナガの写真"></div>
+            <div><img src="./images/shinrin/gallery_content_2.webp" alt=""></div>
+            <div><img src="./images/shinrin/gallery_content_3.webp" alt=""></div>
+            <div><img src="./images/shinrin/gallery_content_1.webp" alt=""></div>
+            <div><img src="./images/shinrin/gallery_content_4.webp" alt=""></div>
+            <div><img src="./images/shinrin/gallery_content_5.webp" alt=""></div>
+        </div>
+
+        <button class="detail-btn gallery-btn" onclick="location.href='gallery.html'"></button>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer section">
+        <div class="wrapper footer-wrapper">
+
+            <div class="footer-inner">
+                <div class="contact">
+                    <div>
+                        <p>江別市役所 企画政策部 広報広聴課<br>
+                            シティプロモート・移住定住促進担当</p>
+                        <p class="tel">☎011-381-1064</p>
+                    </div>
+                    <div>
+                        <p id="contact-museum">北海道博物館 総務課</p>
+                        <p class="tel">☎011-898-0456</p>
+                    </div>
+                </div>
+                <iframe class="footer-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10259.209241281342!2d141.5058887552181!3d43.05936994027562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2d0000a77c39%3A0xe99d3a5999e8c4f5!2z6YeO5bmM5qOu5p6X5YWs5ZySIOWkp-ayouWPo-WFpeWPo-WJjeW6g-WgtA!5e0!3m2!1sja!2sjp!4v1768762617539!5m2!1sja!2sjp"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="footer-nav">
+                <ul>
+                    <img class="footer-logo" src="./images/footer/logo3_2.webp" alt="logo">
+                </ul>
+                <ul class="footer-pagelinks">
+                    <li><a href="./shinrin.html">野幌森林公園</a></li>
+                    <li><a href="./reason-ebetsu.html">江別市について</a></li>
+                    <li><a href="./gallery.html">ギャラリー</a></li>
+                </ul>
+                <ul class="footer-sns-container">
+                    <li><a href="https://www.facebook.com/imacoco.ebetsu/"><img
+                                src="./images/component/Facebook_logo.svg" alt=""></a></li>
+                    <li><a href="https://twitter.com/ebetsu_city"><img src="./images/component/X_logo.svg" alt=""></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/ebetsu_no_hanashi/?hl=ja"><img
+                                src="./images/component/Instagram_logo.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <small>&copy; Ebetsu City</small>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <!-- slick -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+
+    <!-- Gasp -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Original JS -->
+    <script type="text/javascript" src="./js/gsap.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

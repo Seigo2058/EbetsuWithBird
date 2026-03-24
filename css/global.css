@@ -1,0 +1,378 @@
+@charset "UTF-8";
+/* グローバルCSS */
+
+/* フォントインポート */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+
+:root {
+    --main: #D2E8BC;
+    --main2: #4B702A;
+    --text: #000000;
+    --bg: #FDF8EE;
+    --accent: #35312C;
+}
+
+html {
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 16px;
+    background-color: var(--bg);
+    user-select: none;
+}
+
+.wrapper {
+    width: 80vw;
+    max-width: 1728px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+td {
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.03em;
+}
+
+h1 {
+    color: var(--text);
+    font-size: 3rem;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text);
+    font-size: 2rem;
+}
+
+h3 {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+h4 {
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+p,
+td {
+    color: var(--text);
+    line-height: 1.5rem;
+}
+
+/* マージン */
+.mg-top {
+    margin-top: 72px;
+}
+
+.mg-btm {
+    margin-bottom: 72px;
+}
+
+/* 子ページファーストビュー */
+main {
+    width: 100%;
+    height: 90vh;
+
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+}
+
+.title-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.main-title {
+    height: 50vh;
+    width: auto;
+    margin-bottom: 10vh;
+    align-self: center;
+}
+
+.main-deco {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1vh;
+    align-self: center;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+}
+
+/* 詳細を見るボタン　背景が流れる（左から右） */
+.detail-btn {
+    width: 160px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+    overflow: hidden;
+    /*アニメーションの指定*/
+    transition: ease .2s;
+}
+
+.detail-btn svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.detail-btn:hover .detail-btn-item {
+    fill: var(--accent);
+}
+
+.detail-btn:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /*色や形状*/
+    background: var(--bg);
+    /*背景色*/
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.detail-btn:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+/* gallery-btn の例外設定 */
+.gallery-btn {
+    margin-top: 40px;
+}
+
+/* slick */
+/* ギャラリー紹介 */
+.intro-gallery {
+    width: 100%;
+    height: 120vh;
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.intro-gallery h2 {
+    color: var(--bg);
+    line-height: 150%;
+}
+
+.gallery-slider {
+    width: 100%;
+}
+
+.gallery-slider img {
+    margin: 0 auto;
+    height: 25vw;
+    max-height: 450px;
+    min-height: 200px;
+}
+
+.gallery-slider .slick-slide {
+    transition: 0.5s ease-in-out;
+    transform: scale(.75);
+}
+
+.gallery-slider .slick-center {
+    transform: scale(1);
+}
+
+/* ギャラリー紹介テキスト */
+.gallery-text-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ヘッダー */
+/* ヘッダー全体の装飾 */
+header {
+    width: 100%;
+    padding: 10px 20px;
+    /* 上下左右の余白 */
+    box-sizing: border-box;
+    background-color: var(--bg);
+}
+
+.header-wrapper {
+    display: flex;
+    /* 子要素を横並びにする */
+    justify-content: space-between;
+    /* 子要素を両端（左と右）に振り分ける */
+    align-items: center;
+    /* 上下中央揃え */
+    max-width: 1300px;
+    /* コンテンツの最大幅（任意） */
+    margin: 0 auto;
+    /* 画面中央に配置 */
+}
+
+/* ロゴ画像の調整 */
+.header-home .logo {
+    height: 50px;
+    /* 高さを指定（ロゴに合わせて調整してください） */
+    width: auto;
+    /* 比率を保つ */
+    display: block;
+    /* 画像下の隙間を消す */
+}
+
+/* ナビゲーションのリスト（横並びにする） */
+nav ul {
+    display: flex;
+    /* リストアイテムを横並びにする */
+    list-style: none;
+    /* ・（黒丸）を消す */
+    margin: 0;
+    padding: 0;
+    gap: 75px;
+    /* メニュー項目間の余白 */
+}
+
+/* リンクの装飾 */
+nav ul li a {
+    text-decoration: none;
+    /* 下線を消す */
+    color: var(--text);
+    /* 文字色 */
+    transition: color 0.3s;
+    /* ホバー時の変化を滑らかに */
+}
+
+/* ホバー時の色変化 */
+nav ul li a:hover {
+    color: var(--accent);
+    /* マウスを乗せた時の色 */
+}
+
+/* フッター */
+/* フッターレイアウト */
+footer {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main2);
+    position: relative;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7%;
+    height: 86%;
+}
+
+.footer-inner {
+    width: 70%;
+}
+
+.footer-nav {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* フッターコンテンツの設定 */
+.contact {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    padding: 24px 36px;
+    box-sizing: border-box;
+}
+
+.contact p {
+    color: var(--bg);
+}
+
+#contact-museum {
+    line-height: 3rem;
+}
+
+.tel {
+    font-size: 2rem;
+    margin-top: 16px;
+    line-height: 100%;
+}
+
+.footer-map {
+    width: 100%;
+    height: 65%;
+    border-radius: 16px;
+    margin-top: 4%;
+}
+
+.footer-logo {
+    max-width: 181px;
+    width: 100%;
+    max-height: 72px;
+    height: auto;
+}
+
+.footer-pagelinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+}
+
+.footer-inner ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--bg);
+}
+
+.footer-nav a:hover {
+    color: var(--accent);
+    transition: .3s ease;
+}
+
+.footer-sns-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.copyright small {
+    color: var(--bg);
+}
